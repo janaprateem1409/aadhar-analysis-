@@ -4,7 +4,7 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
-public class SortComparator extends WritableComparator {
+public class Sort_Comparator extends WritableComparator {
 	
 	@Override
 	public int compare(WritableComparable k1, WritableComparable k2) {
@@ -15,7 +15,7 @@ public class SortComparator extends WritableComparator {
 		
 	}
 
-	protected SortComparator() {
+	protected Sort_Comparator() {
         super(IntWritable.class, true);
     }
 }
