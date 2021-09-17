@@ -8,11 +8,11 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.log4j.Logger;
 
-public class NumUIDMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+public class Num_Mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
 	Text state = new Text();
 	IntWritable count = new IntWritable();
-	private static final Logger LOG = Logger.getLogger(NumUIDMapper.class);
+	private static final Logger LOG = Logger.getLogger(Num_Mapper.class);
 
 	public void map(LongWritable key, Text value, Context context)
 			throws IOException, InterruptedException {
