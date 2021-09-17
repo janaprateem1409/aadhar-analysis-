@@ -28,8 +28,8 @@ public class Driver extends Configured implements Tool {
 		/* Field separator for reducer output*/
 		stateWiseCount.getConfiguration().set("mapreduce.output.textoutputformat.separator", " | ");
 		
-		stateWiseCount.setMapperClass(NumUIDMapper.class);
-		stateWiseCount.setReducerClass(NumUIDReducer.class);
+		stateWiseCount.setMapperClass(Num_Mapper.class);
+		stateWiseCount.setReducerClass(Num_Reducer.class);
 
 		stateWiseCount.setInputFormatClass(TextInputFormat.class);
 		stateWiseCount.setMapOutputKeyClass(Text.class);
@@ -60,9 +60,9 @@ public class Driver extends Configured implements Tool {
 		sort.setOutputKeyClass(Text.class);
 		sort.setOutputValueClass(IntWritable.class);
 
-		sort.setMapperClass(SortMapper.class);
-		sort.setReducerClass(SortReducer.class);
-		sort.setSortComparatorClass(SortComparator.class);
+		sort.setMapperClass(Sort_Mapper.class);
+		sort.setReducerClass(Sort_Reducer.class);
+		sort.setSortComparatorClass(Sort_Comparator.class);
 		
 		sort.setMapOutputKeyClass(IntWritable.class);
 		sort.setMapOutputValueClass(Text.class);
