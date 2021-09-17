@@ -7,7 +7,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class SortMapper extends Mapper<LongWritable, Text, IntWritable, Text> {
+public class Sort_Mapper extends Mapper<LongWritable, Text, IntWritable, Text> {
 
 	Text state = new Text();
 	IntWritable count = new IntWritable();
